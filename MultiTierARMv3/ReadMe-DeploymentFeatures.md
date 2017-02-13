@@ -39,11 +39,13 @@
 	* This ensures that each time you deploy you will never have any naming conflicts.
 	* All resources are easy to identify.
 
+
 3. JSON Parameter Allowed Values ensure that we have a validated set of values for any parameter
 
 		E.g. vmStorageAccountType = "Standard_LRS","Standard_ZRS","Standard_GRS","Standard_RAGRS","Premium_LRS"
 		E.g. vmDomainName         = "Contoso.com","AlpineSkiHouse.com","Fabrikam.com","TreyResearch.net"
 		E.g. vmWindowsOSVersion   = "2008-R2-SP1","2012-Datacenter","2012-R2-Datacenter","2016-Datacenter"
+
 
 4. Dynamically create resource names based on the unique Deployment *Build your naming standards into this process
 	
@@ -76,6 +78,7 @@
 
 	The full name will be: __contosovmbrwdevdc1.eastus.cloudapp.azure.com__, which has to be unique dns per region.
 
+
 6. A subdeployment is called twice during the Deployment to adjust the DNS Servers setttings on the Subnet
 
 	This nested template is part of the project and is automatically uploaded
@@ -86,6 +89,7 @@
 	2. The Deployment, since it uses this name to update the correct VNet/Subnet based on the naming standard
 
 		E.g. __vnBRWDev101__/__snBRWDev101-01__
+
 
 7. The AzureRM Modules that are required for this project are made available via the Azure SDK
 
@@ -106,11 +110,13 @@
 
 8. Outputs, provides the Public DNS Name for the VM's
 
+
 9. You can connect to Virtual Machine in Azure via it's Public IP Address or DNS name with MSTSC/RDP
 
 	Only the FrontEnd Servers have a Public IP in this deployment.
 
 	You can use these as a jump box to get to the other Virtual Machines using the Internal IP
+
 	
 10. You can Deploy the Full Template with all Tiers or simply deploy an individual Tier
 
@@ -141,4 +147,3 @@
 		Then these are sent into the nested deployment via the following
 		
 			"parameters": "[deployment().properties.parameters]"
-			
