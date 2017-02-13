@@ -64,7 +64,7 @@
 		"[concat('vm', variables('Deployment'),'DC1')]"
 	
 
-5. Function are used within the Template
+5. Functions are used within the Template
 
 	The Storage account is named: sabrwdev101 which is lower case, which is a requirement.
 
@@ -106,7 +106,7 @@
 
 8. Outputs, provides the Public DNS Name for the VM's
 
-9. You can connect to any Virtual Machine in Azure via it's Public IP Address or DNS name with MSTSC/RDP
+9. You can connect to Virtual Machine in Azure via it's Public IP Address or DNS name with MSTSC/RDP
 
 	Only the FrontEnd Servers have a Public IP in this deployment.
 
