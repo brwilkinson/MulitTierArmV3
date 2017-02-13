@@ -43,7 +43,7 @@
 
 		E.g. vmStorageAccountType = "Standard_LRS","Standard_ZRS","Standard_GRS","Standard_RAGRS","Premium_LRS"
 		E.g. vmDomainName         = "Contoso.com","AlpineSkiHouse.com","Fabrikam.com","TreyResearch.net"
-		E.g. vmWindowsOSVersion   = "2008-R2-SP1","2012-Datacenter","2012-R2-Datacenter","Windows-Server-Technical-Preview"
+		E.g. vmWindowsOSVersion   = "2008-R2-SP1","2012-Datacenter","2012-R2-Datacenter","2016-Datacenter"
 
 4. Dynamically create resource names based on the unique Deployment *Build your naming standards into this process
 	
