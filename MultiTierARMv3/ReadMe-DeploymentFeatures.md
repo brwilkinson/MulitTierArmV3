@@ -112,3 +112,33 @@
 
 	You can use these as a jump box to get to the other Virtual Machines using the Internal IP
 	
+10. You can Deploy the Full Template with all Tiers or simply deploy an individual Tier
+
+	This is useful if you already have a VNet or if you already have a ActiveDirectory
+	
+	This is useful since you can initially deploy a small amount of MidTier, then go and add some later
+	
+	To Deploy all Tiers simply choose the following template
+		
+		0-azuredeploy-ALL.json
+		
+	Otherwise start with the template that you need, then proceed onto the next one
+	
+		1-azuredeploy-VNet.json
+		2-azuredeploy-Directory.json
+		3-azuredeploy-DataBase.json
+		4-azuredeploy-MidTier.json
+		5-azuredeploy-FrontEnd.json
+		
+	These templates work because they all share the exact same parameters and parameters file
+	
+		azuredeploy.parameters.json
+		
+	Also since the Parent Template calls the nested deployments if you use 0-azuredeploy-ALL.json
+	
+		The full set of Parameters and Values are read from the file or user input
+		
+		Then these are sent into the nested deployment via the following
+		
+			"parameters": "[deployment().properties.parameters]"
+			
