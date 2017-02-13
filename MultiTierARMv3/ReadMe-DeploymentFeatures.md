@@ -12,7 +12,7 @@
 
 	They also create secrets and upload them to KeyVault
 
-		Optionally you can access the KeyVault at deploytime using the Parameter dialog to manage and use secrets via KeyVault
+		Optionally you can access the KeyVault at deploymenttime using the Parameter dialog
 		
 		* Note you do have to at least Create the KeyVault in the same region that you are deploying into.
 
