@@ -101,7 +101,7 @@ break
 # F5 loads the script
 
 $Cred = get-credential brw
-$SAK = 'kBvS3pFQ7KozYtSnezXsTukLTSUkGLxf+PfjLVhXLecTC151FhtHhIrIomCUiY24JWeE9zQWNc1mSSZEjjrPVA=='
+$SAK = '<><><><><><><><><><<>'
 $sakss = ConvertTo-SecureString -String $SAK -AsPlainText -Force
 main -ConfigurationData .\ConfigurationDataSQL.psd1 -AdminCreds $cred -Verbose -StorageAccountKeySource $sakss 
 Set-DscLocalConfigurationManager -Path .\Main -Force -Verbose
